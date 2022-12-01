@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.com">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+
+<title>Home page</title>
+</head>
+<style>
+body {
+	background-image:
+		url("https://www.kindpng.com/picc/m/239-2394224_collaboration-solutions-advantage-of-the-employee-management-system.png");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: 'Muli', sans-serif;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: red;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
+</style>
+<body>
+
+	<!-- Navbar -->
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+		<a class="navbar-brand" href="#"> <img
+			src="https://www.kindpng.com/picc/m/239-2394224_collaboration-solutions-advantage-of-the-employee-management-system.png"
+			width="30" height="30" class="d-inline-block align-top" alt="">
+			EmpSystem
+		</a>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active"><a class="nav-link" href="home">Home
+						<span class="sr-only">(current)</span>
+				</a></li>
+				<li class="nav-item"><a class="nav-link" href="showEmp">Show Employee</a></li>
+				<li class="nav-item"><a class="nav-link" href="addEmp">Add Employee</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+				<input class="form-control mr-sm-2" type="search"
+					placeholder="Search" aria-label="Search">
+				<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+			</form>
+		</div>
+	</nav>
+	
+	<!-- Navbar -->
+		<div class="container">
+		<div class="row">
+			<div class="col-md-6 offset-md-3">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="text-center text-primary">Add Emp</h4>
+
+						<form th:action="@{/register}" method="post">
+
+							<div class="form-group">
+								<label>Enter Full Name</label> <input type="text"
+									class="form-control" name="name">
+							</div>
+
+							<div class="form-group">
+								<label>Enter Address</label> <input type="text"
+									class="form-control" name="address">
+							</div>
+
+							<div class="form-group">
+								<label>Enter Email</label> <input type="email"
+									class="form-control" name="email">
+							</div>
+
+
+							<div class="form-group">
+								<label>Enter Phone No</label> <input type="number"
+									class="form-control" name="phno">
+							</div>
+
+
+							<div class="form-group">
+								<label>Enter Salary</label> <input type="number"
+									class="form-control" name="salary">
+							</div>
+
+							<button class="btn btn-primary btn-block">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+</body>
+<footer class="text-center text-white"
+	style="background-color: #caced1;">
+	<!-- Grid container -->
+	<div class="text-center p-3"
+		style="background-color: rgba(0, 0, 0, 0.2);">
+		© 2022 Copyright: <a class="text-white"
+			href="https://www.linkedin.com/in/wahid-hussain-191231204/">Wahid Hussain</a>
+	</div>
+	<!-- Copyright -->
+</footer>
+</html>
